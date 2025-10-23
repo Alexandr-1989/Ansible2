@@ -82,8 +82,9 @@
 <img width="1419" height="486" alt="1-1-2" src="https://github.com/user-attachments/assets/34264e6d-5358-4a85-9fda-b85885dd9fe5" />
 <img width="1424" height="597" alt="1-1-3" src="https://github.com/user-attachments/assets/3432935a-6f8d-450a-a868-8c5dc4e5dd43" />
 3.
+
 ```
---
+---
 - name: Change MOTD message dynamically
   hosts: all
   become: true
@@ -106,7 +107,6 @@
             owner: root
             group: root
             mode: '0644'
-
 ```
 <img width="1552" height="1030" alt="P3" src="https://github.com/user-attachments/assets/445150f4-34f1-4cfd-ae71-a58049eb6a1b" />
 <img width="505" height="118" alt="p1-3" src="https://github.com/user-attachments/assets/4ea4a46a-0975-4c48-a317-2b27588945d7" />
