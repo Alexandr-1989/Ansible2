@@ -1,0 +1,22 @@
+--
+- name: Change MOTD message dynamically
+  hosts: all
+  become: true
+  become_method: sudo
+  gather_facts: true
+  tasks:
+    - name: Set dynamic MOTD with IP address and hostname
+      block:
+        - name: Generate custom MOTD message
+          set_fact:
+            motd_message: |
+              Приветствую вас на сервере {{ inventory_hostname }}!
+              Его IP-адрес: {{ ansible_default_ipv4.address }}
+
+        - name: Update MOTD with custom greeting
+          copy:
+            content: "{{ motd_message }}\n"
+            dest: /etc/motd
+            owner: root
+            group: root
+            mode: '0644'
