@@ -32,6 +32,7 @@
 
 Модифицируйте плейбук из пункта 3, задания 1. В качестве приветствия он должен установить IP-адрес и hostname управляемого хоста, пожелание хорошего дня системному администратору.
 Выполнение
+
 [playbook-motd2.yml](https://github.com/Alexandr-1989/Ansible2/blob/main/playbook-motd2.yml)
 <img width="2183" height="316" alt="Screenshot_22" src="https://github.com/user-attachments/assets/3d1b6d2c-24c8-474e-9a1b-4771f9fd512f" />
 <img width="509" height="98" alt="p2-2" src="https://github.com/user-attachments/assets/17f94e4d-f6d2-4f98-8928-0763b58feedc" />
