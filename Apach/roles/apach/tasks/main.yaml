@@ -1,1 +1,8 @@
+---
+  - import_tasks: install.yaml
+  - import_tasks: service.yaml
+  - import_tasks: port.yaml
+  - import_tasks: index.yaml
+  - import_tasks: connection.yaml
+
 
