@@ -10,7 +10,7 @@
 3 Изменить приветствие системы (motd) при входе на любое другое. Пожалуйста, в этом задании используйте переменную для задания приветствия. Переменную можно задавать любым удобным способом.
 
 Выполнение
-[](https://github.com/Alexandr-1989/Ansible2/blob/main/playbook-kafka.yml)
+[playbook-kafka.yml](https://github.com/Alexandr-1989/Ansible2/blob/main/playbook-kafka.yml)
 
 <img width="1591" height="317" alt="p1" src="https://github.com/user-attachments/assets/21fe1896-19e7-4a09-a08f-a80c9617e1a3" />
 <img width="624" height="621" alt="1-1" src="https://github.com/user-attachments/assets/d496964c-2d39-42b1-9994-4042ad2f3b9f" />
@@ -32,30 +32,7 @@
 
 Модифицируйте плейбук из пункта 3, задания 1. В качестве приветствия он должен установить IP-адрес и hostname управляемого хоста, пожелание хорошего дня системному администратору.
 Выполнение
-```
---
-- name: Change MOTD message dynamically
-  hosts: all
-  become: true
-  become_method: sudo
-  gather_facts: true
-  tasks:
-    - name: Set dynamic MOTD with IP address and hostname
-      block:
-        - name: Generate custom MOTD message
-          set_fact:
-            motd_message: |
-              Приветствую вас на сервере {{ inventory_hostname }}!
-              Его IP-адрес: {{ ansible_default_ipv4.address }}
-
-        - name: Update MOTD with custom greeting
-          copy:
-            content: "{{ motd_message }}\n"
-            dest: /etc/motd
-            owner: root
-            group: root
-            mode: '0644'
-```
+[playbook-motd2.yml](https://github.com/Alexandr-1989/Ansible2/blob/main/playbook-motd2.yml)
 <img width="2183" height="316" alt="Screenshot_22" src="https://github.com/user-attachments/assets/3d1b6d2c-24c8-474e-9a1b-4771f9fd512f" />
 <img width="509" height="98" alt="p2-2" src="https://github.com/user-attachments/assets/17f94e4d-f6d2-4f98-8928-0763b58feedc" />
 <img width="526" height="94" alt="p2-11" src="https://github.com/user-attachments/assets/5278d7e8-673a-445f-84cb-79b6ffb825b7" />
