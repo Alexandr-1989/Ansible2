@@ -48,16 +48,14 @@
       file:
         path: "{{ target_dir }}"
         state: directory
-<img width="624" height="621" alt="1-1" src="https://github.com/user-attachments/assets/d496964c-2d39-42b1-9994-4042ad2f3b9f" />
-<img width="702" height="673" alt="1-12" src="https://github.com/user-attachments/assets/45695185-9086-4d19-958f-a35081dfd5a9" />
-
 
 ....
 ....
 ....
 ....
 ```
-
+<img width="624" height="621" alt="1-1" src="https://github.com/user-attachments/assets/d496964c-2d39-42b1-9994-4042ad2f3b9f" />
+<img width="702" height="673" alt="1-12" src="https://github.com/user-attachments/assets/45695185-9086-4d19-958f-a35081dfd5a9" />
 `При необходимости прикрепитe сюда скриншоты
 ![Название скриншота 1](ссылка на скриншот 1)`
 
