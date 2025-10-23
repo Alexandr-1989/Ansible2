@@ -1,1 +1,17 @@
+---
+- name: Download and extract Kafka archive
+  hosts: all
+  become: yes
+  vars_prompt:
+    - name: "ansible_become_pass"
+      prompt: "Enter your sudo password:"
+      private: true
+  vars:
+    archive_url: https://dlcdn.apache.org/kafka/3.4.0/kafka_2.13-3.4.0.tgz
+    target_dir: /opt/kafka
+  tasks:
+    - name: Create directory for extracted files
+      file:
+        path: "{{ target_dir }}"
+        state: directory
 
