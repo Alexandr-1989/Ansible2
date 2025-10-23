@@ -49,18 +49,38 @@
         path: "{{ target_dir }}"
         state: directory
 
-....
-....
-....
-....
 ```
+<img width="1591" height="317" alt="p1" src="https://github.com/user-attachments/assets/21fe1896-19e7-4a09-a08f-a80c9617e1a3" />
 <img width="624" height="621" alt="1-1" src="https://github.com/user-attachments/assets/d496964c-2d39-42b1-9994-4042ad2f3b9f" />
 <img width="702" height="673" alt="1-12" src="https://github.com/user-attachments/assets/45695185-9086-4d19-958f-a35081dfd5a9" />
-`При необходимости прикрепитe сюда скриншоты
-![Название скриншота 1](ссылка на скриншот 1)`
 
+2.
 
+```
 ---
+- name: Install and start tuned service
+  hosts: all
+  become: true
+  vars_prompt:
+    - name: "ansible_become_pass"
+      prompt: "Please enter your sudo password"
+      private: true
+  tasks:
+    - name: Ensure tuned package is installed
+      yum:
+        name: tuned
+        state: present
+
+    - name: Start and enable tuned service
+      service:
+        name: tuned
+        enabled: true
+        state: started
+
+```
+<img width="1419" height="486" alt="1-1-2" src="https://github.com/user-attachments/assets/34264e6d-5358-4a85-9fda-b85885dd9fe5" />
+<img width="1424" height="597" alt="1-1-3" src="https://github.com/user-attachments/assets/3432935a-6f8d-450a-a868-8c5dc4e5dd43" />
+
 
 ### Задание 2
 
