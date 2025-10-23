@@ -1,1 +1,7 @@
-
+--
+  - name: start apache webserver
+    service:
+      name: apache2
+      state: started
+      enabled: true
+      
