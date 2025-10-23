@@ -1,1 +1,6 @@
+---
+  - name: wait for port 80 to become open
+    wait_for:
+      port: 80
+      delay: 10
 
