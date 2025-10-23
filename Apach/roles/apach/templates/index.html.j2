@@ -1,1 +1,5 @@
+<p>IP: {{ ansible_facts.all_ipv4_addresses [0] }}
+<p>CPU: {{ ansible_facts.processor }}
+<p>RAM_mb: {{ ansible_facts.memtotal_mb }}
+<p>vda1_size: {{ ansible_facts['devices']['vda']['partitions']['vda1']['size'] }}
 
