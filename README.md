@@ -10,24 +10,7 @@
 3 Изменить приветствие системы (motd) при входе на любое другое. Пожалуйста, в этом задании используйте переменную для задания приветствия. Переменную можно задавать любым удобным способом.
 
 Выполнение
-1.
-```
----
-- name: Download and extract Kafka archive
-  hosts: all
-  become: yes
-  vars_prompt:
-    - name: "ansible_become_pass"
-      prompt: "Enter your sudo password:"
-      private: true
-  vars:
-    archive_url: https://dlcdn.apache.org/kafka/3.4.0/kafka_2.13-3.4.0.tgz
-    target_dir: /opt/kafka
-  tasks:
-    - name: Create directory for extracted files
-      file:
-        path: "{{ target_dir }}"
-        state: directory
+[playbook-kafka.yml](https://github.com/Alexandr-1989/Ansible2/blob/main/playbook-kafka.yml)
 
 ```
 <img width="1591" height="317" alt="p1" src="https://github.com/user-attachments/assets/21fe1896-19e7-4a09-a08f-a80c9617e1a3" />
