@@ -10,8 +10,6 @@
 3 Изменить приветствие системы (motd) при входе на любое другое. Пожалуйста, в этом задании используйте переменную для задания приветствия. Переменную можно задавать любым удобным способом.
 
 
-Выполнение
-
 [playbook-kafka.yml](https://github.com/Alexandr-1989/Ansible2/blob/main/playbook-kafka.yml)
 
 <img width="1591" height="317" alt="p1" src="https://github.com/user-attachments/assets/21fe1896-19e7-4a09-a08f-a80c9617e1a3" />
@@ -33,7 +31,6 @@
 Выполните действия, приложите файлы с модифицированным плейбуком и вывод выполнения.
 
 Модифицируйте плейбук из пункта 3, задания 1. В качестве приветствия он должен установить IP-адрес и hostname управляемого хоста, пожелание хорошего дня системному администратору.
-Выполнение
 
 [playbook-motd2.yml](https://github.com/Alexandr-1989/Ansible2/blob/main/playbook-motd2.yml)
 <img width="2183" height="316" alt="Screenshot_22" src="https://github.com/user-attachments/assets/3d1b6d2c-24c8-474e-9a1b-4771f9fd512f" />
